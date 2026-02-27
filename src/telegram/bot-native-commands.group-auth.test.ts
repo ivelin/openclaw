@@ -28,7 +28,7 @@ describe("registerTelegramNativeCommands (group command authorization)", () => {
     getPluginCommandSpecs.mockReturnValue([]);
     matchPluginCommand.mockReturnValue(null);
     executePluginCommand.mockResolvedValue({ text: "ok" });
-    deliverReplies.mockResolvedValue({ delivered: true });
+    deliverReplies.mockResolvedValue(undefined);
   });
 
   it("blocks unauthorized users in groups even if they are in DM allowFrom", async () => {
